@@ -1,0 +1,1 @@
+export { RangeSliderThumb } from './RangeSliderThumb';

@@ -19,5 +19,6 @@ export function getTheme(): Theme {
       },
       grey: colors.grey,
     },
+    spacing: 4,
   });
 }

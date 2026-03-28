@@ -1,1 +1,2 @@
-export { getComponentClassName, mergeSx } from "./utils";
+export { getComponentClassName, mergeSx } from './utils';
+export { getRelativeValue } from './getRelativeValue';

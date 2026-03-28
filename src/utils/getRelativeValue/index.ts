@@ -1,0 +1,1 @@
+export { getRelativeValue } from './getRelativeValue';
