@@ -1,0 +1,73 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Tree View/RichTreeViewPro/Prop Resolvers" />
+
+# Prop Resolvers
+
+The `RichTreeViewPro` utilizes a **Prop Resolver** architecture to manage **UI-related node state and props**. This separates domain data from UI presentation logic.
+
+## Motivation
+
+Traditional models store UI props (such as `disabled` or `sx`) directly inside data nodes. This couples domain data to presentation concerns.
+**Prop Resolvers** introduce a dedicated logic layer that computes these properties at render time without mutating the underlying data.
+
+### Core Benefits
+
+- **Pure Data:** The `items` array remains focused on domain data (IDs, labels), keeping the data layer **UI-agnostic** and decoupled from presentation logic.
+- **Dynamic Logic:** UI behavior can be derived from node structure (e.g. depth) or application state without modifying the data structure.
+- **Stability:** Logic is centralized in a factory-style hook, ensuring resolver functions remain stable across renders and preventing unnecessary re-renders.
+- **Performance:** Structural helpers such as `depthMap` are pre-calculated once per item set and shared across all resolvers, turning repeated tree traversals into constant-time lookups.
+- **Scalability:** The architecture supports large and deeply nested hierarchies by using flat metadata lookups, helping maintain UI responsiveness as datasets grow.
+
+## How to Use
+
+The system uses a factory-style hook, `useTreeItemResolvers`, to produce a stable set of prop resolver functions.
+
+### 1. Define the Logic
+
+The factory receives a `helpers` object (including `depthMap`) to support structural decisions.
+
+```tsx
+const resolvers = useTreeItemResolvers(
+  items,
+  ({ depthMap }) => ({
+    // Styling the label based on depth
+    getLabelTypographyProps: (item) => {
+      const depth = depthMap.get(item.id);
+
+      return depth === 0 ? { variant: 'subtitle1', fontWeight: 700 } : undefined;
+    },
+
+    // Determining interactivity
+    isItemDisabled: (item) => {
+      return !item.children && depthMap.get(item.id) !== 3;
+    },
+  }),
+  [optionalDependency]
+);
+```
+
+### 2. Pass to the Component
+
+Pass the resulting object to the `resolvers` prop of `RichTreeViewPro`. The component internally handles the distribution of these properties to every individual `TreeItem`.
+
+```tsx
+<RichTreeViewPro items={items} resolvers={resolvers} />
+```
+
+## Resolver API Reference
+
+Each resolver is an optional function that receives the current node (`item`) and returns the specific props for that UI slot.
+
+- `getCheckboxProps` - Configures the selection checkbox (color, size, etc). `CheckboxProps / undefined`
+- `getStartIconProps` - Defines the icon leading the label. `StartIconProps / undefined`
+- `getEndIconButtonProps` - Defines an action button at the end of the row. `IconButtonProps / undefined`
+- `getLabelTypographyProps`- Styles the label text (variant, color, sx). `TypographyProps / undefined`
+- `getTreeItemProps` - Defines container-level logic (hasDropzone, sx). `{ hasDropzone?: boolean; sx?: SxProps } / undefined`
+- `isItemDisabled` - Determines if the node is interactive. `boolean`
+
+## Best Practices
+
+- **Logic Purity:** Keep resolvers pure. Avoid side-effects (like fetching data) inside a resolver; instead, use the `deps` array in the hook to react to external state changes.
+- **Leverage Helpers:** Use the `depthMap` for any logic regarding nesting levels. It is pre-calculated to ensure O(1) performance during the render cycle.
+- **Stability:** Always wrap your factory logic in the `useTreeItemResolvers` hook to maintain referential stability and prevent full-tree re-renders.
