@@ -1,8 +1,11 @@
 export default {
-  framework: {
-    name: "@storybook/react-vite",
-    options: {},
-  },
+  framework: "@storybook/react-vite",
   stories: ["../src/**/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-essentials"],
+  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  viteFinal: async (config) => {
+    return {
+      ...config,
+      base: "/advanced-ui-components/",
+    };
+  },
 };
