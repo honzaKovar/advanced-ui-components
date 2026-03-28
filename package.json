@@ -9,8 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages -d storybook-static"
+    "storybook:build": "storybook build",
+    "storybook:publish": "npm run storybook:build && touch ./storybook-static/.nojekyll && npx gh-pages -d ./storybook-static --dotfiles"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
