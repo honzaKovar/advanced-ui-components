@@ -1,0 +1,87 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title='Stories/PlayoutTrimmer/Description' />
+
+# PlayoutTrimmer
+
+A triple-handle timeline component for range selection and precise progress control.
+
+Designed for media-oriented interfaces where users need to define a segment and navigate within it.
+
+---
+
+## Overview
+
+The component exposes two coordinated controls:
+
+- **Range** — defines an active segment
+- **Progress** — represents position within that segment
+
+Progress is automatically constrained to the active range, ensuring consistent behavior during interaction.
+
+---
+
+## Key Concepts
+
+### Coordinated State
+
+Range and progress are managed independently but remain logically synchronized.  
+Updates to the range will clamp the progress value when necessary.
+
+---
+
+### Unit-Agnostic Scaling
+
+The component operates independently of any specific unit system:
+
+- **Normalized** → `0 → 1`
+- **Absolute units** → arbitrary ranges (e.g. frames, time, ticks)
+
+This allows the same component to be reused across different domains without modifying internal logic.
+
+---
+
+### Deterministic & Controlled
+
+The component is fully controlled and stateless:
+
+- All state is managed externally
+- No implicit assumptions about time or units
+- Predictable updates through standard event handlers
+
+---
+
+### Integration
+
+Designed to work with external state management:
+
+- Supports asynchronous and optimistic updates
+- Can be driven by multiple input sources (sliders, buttons, programmatic updates)
+- Maintains consistent behavior under rapid updates
+
+---
+
+## API (Essential Props)
+
+- **`totalSeconds`** — total duration (used for ruler labeling)
+
+- **`totalUnits`** _(optional)_ — enables unit-based scaling
+
+- **`RangeSliderProps`**
+  - `value: [number, number]`
+  - `onChange`
+
+- **`ProgressSliderProps`**
+  - `value: number`
+  - `onChange`
+
+- **`disableProgressConstraint`** _(optional)_
+  - disables automatic clamping when external control is required
+
+---
+
+## Notes
+
+- Built on top of MUI primitives with custom coordination logic  
+- Designed for composability and reuse across different interaction models  
+- Handles edge cases such as dynamic range updates and transient invalid values
