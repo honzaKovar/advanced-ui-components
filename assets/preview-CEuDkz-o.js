@@ -1,0 +1,1 @@
+const i={},c=[r=>(typeof document<"u"&&new MutationObserver(s=>{for(const n of s)n.addedNodes.forEach(e=>{var t,o;e.nodeType===1&&((t=e.textContent)!=null&&t.includes("MUI X Missing license key"))&&((o=e.lastChild)==null||o.remove())})}).observe(document.body,{childList:!0,subtree:!0}),r())];export{c as decorators,i as parameters};
