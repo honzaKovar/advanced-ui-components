@@ -57,6 +57,11 @@ export const Default: PlayoutTrimmerStoryObj = {
     width: 800,
     range: [0, 4110],
   },
+  parameters: {
+    controls: {
+      include: ['progress', 'progressUnits', 'totalSeconds', 'useUnits', 'width', 'disableProgressConstraint'],
+    },
+  },
   render: (args) => {
     const { progress, progressUnits, range, totalSeconds, useUnits, width, ...rest } = args as PlayoutTrimmerStoryProps;
 
