@@ -1,13 +1,13 @@
 import { render } from '@testing-library/react';
+import { SvgIconProps, ThemeProvider } from '@mui/material';
 
+import { theme } from '../../../../theme';
 import { RichTree } from '../../';
 import { mockedItemId, mockedItems, mockedLabel, mockedTreeItem, mockRootClass } from '../../__mocks__';
 import { TreeItemPropResolvers, TreeViewBaseItem } from '../../types';
 
 import { dropzoneClassName } from './constants';
 import { TreeItem } from './TreeItem';
-import { SvgIconProps, ThemeProvider } from '@mui/material';
-import { theme } from '../../../../theme';
 
 const mockUseTreeItemModel = jest.fn();
 

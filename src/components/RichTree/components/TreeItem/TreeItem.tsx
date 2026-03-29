@@ -3,13 +3,13 @@ import { TreeItem as MuiTreeItem } from '@mui/x-tree-view/TreeItem';
 import { useTreeItemModel } from '@mui/x-tree-view-pro';
 import { ElementType, forwardRef, Ref } from 'react';
 
+import { mergeSx } from '../../../../utils';
 import { TreeItemProps, TreeViewBaseItem } from '../../types';
 import { TreeItemLabelWithIcon } from '../TreeItemLabelWithIcon';
 import { TreeItemLabelWithIconProps } from '../types';
 
 import { defaultCheckboxProps, dropzoneClassName } from './constants';
 import { getDefaultTreeItemSx } from './styles';
-import { mergeSx } from '../../../../utils';
 
 /**
  * A customized TreeItem component that integrates with the RichTree wrapper.

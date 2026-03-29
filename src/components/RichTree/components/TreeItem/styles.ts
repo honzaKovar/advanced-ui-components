@@ -1,8 +1,8 @@
 import { treeItemClasses } from '@mui/x-tree-view/TreeItem';
-
-import { TreeItemVariant } from '../../types';
 import { alpha, SxProps, Theme } from '@mui/material';
+
 import { mergeSx } from '../../../../utils';
+import { TreeItemVariant } from '../../types';
 
 const iconSizePx = 16;
 const iconContainerSizePx = 24;

@@ -1,12 +1,13 @@
+import { Box, Slider, SliderProps } from '@mui/material';
 import { ReactElement } from 'react';
+
+import { mergeSx } from '../../utils';
 
 import { componentClassName, defaultActiveRange, progressSliderClassName, rangeSliderClassName, scale } from './constants';
 import { defaultProgressSliderSx, defaultRangeSliderSx, defaultPlayoutTrimmerSx } from './styles';
 import { PlayoutTrimmerProps } from './types';
 import { usePlayoutTrimmer } from './usePlayoutTrimmer';
 import { getMarks, isNumberTuple } from './utils';
-import { Box, Slider, SliderProps } from '@mui/material';
-import { mergeSx } from '../../utils';
 import { RangeSliderThumb, RulerCanvas } from './components';
 
 const { decimalMax, decimalStep, min, unitStep } = scale;

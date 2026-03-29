@@ -1,4 +1,5 @@
 import { CheckboxProps } from '@mui/material/Checkbox';
+
 import { getTreeViewComponentClassName } from '../../utils';
 
 import { checkboxSx } from './styles';

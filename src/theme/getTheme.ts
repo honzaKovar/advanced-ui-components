@@ -1,5 +1,6 @@
-import { createTheme, Theme } from "@mui/material/styles";
-import { colors } from "./colors";
+import { createTheme, Theme } from '@mui/material/styles';
+
+import { colors } from './colors';
 
 export function getTheme(): Theme {
   return createTheme({

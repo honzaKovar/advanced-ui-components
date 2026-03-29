@@ -1,3 +1,3 @@
-import { getTheme } from "./getTheme";
+import { getTheme } from './getTheme';
 
 export const theme = getTheme();

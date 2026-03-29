@@ -1,6 +1,7 @@
-import { TreeItemProps, TreeViewBaseItem } from '../../components/RichTree';
 import { RichTreeViewProProps } from '@mui/x-tree-view-pro';
 import { StoryObj } from '@storybook/react';
+
+import { TreeItemProps, TreeViewBaseItem } from '../../components/RichTree';
 
 export type RichTreeStoryObj = StoryObj<
   RichTreeViewProProps<TreeViewBaseItem, true> &

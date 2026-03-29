@@ -1,5 +1,6 @@
 import { ThemeProvider } from '../../theme';
-import { RichTree } from '../../components/RichTree';
+import { RichTree } from '../../components';
+
 import { mockedBaseItems, sharedArgs, sharedArgTypes } from './constants';
 import { CustomizedRichTree } from './StoryComponents';
 import { RichTreeStoryObj } from './types';

@@ -1,9 +1,10 @@
 /* eslint-disable sort-keys */
 import { StoryObj } from '@storybook/react';
 
-import { PlayoutTrimmerStory, PlayoutTrimmerStoryProps } from './StoryComponents';
 import { PlayoutTrimmer } from '../../components';
 import { ThemeProvider } from '../../theme';
+
+import { PlayoutTrimmerStory, PlayoutTrimmerStoryProps } from './StoryComponents';
 
 export default { component: PlayoutTrimmer };
 

@@ -1,12 +1,12 @@
+import { IconButton, Stack, Typography } from '@mui/material';
 import { MouseEvent } from 'react';
 
+import { mergeSx } from '../../../../utils';
 import { iconButtonClassName } from '../../constants';
 import { TreeItemLabelWithIconProps } from '../types';
 
 import { HighlightedLabel } from './HighlightedLabel';
 import { defaultIconButtonSx, defaultLabelSx, wrapperSx } from './styles';
-import { IconButton, Stack, Typography } from '@mui/material';
-import { mergeSx } from '../../../../utils';
 
 export const TreeItemLabelWithIcon = ({
   children,

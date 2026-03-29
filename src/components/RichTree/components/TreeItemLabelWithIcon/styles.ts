@@ -1,4 +1,5 @@
 import { SxProps, Theme } from '@mui/material';
+
 import { iconButtonClassName } from '../../constants';
 
 const createOpacityTransition = (transitions: Theme['transitions']) =>

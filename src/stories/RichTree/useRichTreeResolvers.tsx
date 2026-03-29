@@ -3,10 +3,11 @@ import FolderIcon from '@mui/icons-material/Folder';
 import LabelImportantIcon from '@mui/icons-material/LabelImportant';
 import WorkspacesIcon from '@mui/icons-material/Workspaces';
 
+import { useTreeItemResolvers } from '../../components/RichTree';
+
 import { customizedAssetIconSx, customizedRemoteNodeSx } from './styles';
 import { CustomRichTreeNode } from './types';
 import { getRandomColor } from './utils';
-import { useTreeItemResolvers } from '../../components/RichTree';
 import { TreeDepth } from './constants';
 
 const { Folder, Group, Item, Workspace } = TreeDepth;

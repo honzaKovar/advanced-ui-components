@@ -3,11 +3,12 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { RichTreeViewPro, RichTreeViewProProps } from '@mui/x-tree-view-pro';
 import { ForwardedRef, forwardRef } from 'react';
 
+import { mergeSx } from '../../utils';
+
 import { TreeItem } from './components';
 import { useIsItemDisabled } from './hooks';
 import { defaultRichTreeSx } from './styles';
 import { BaseProps, RichTreeWrapperProps, TreeItemProps, TreeViewBaseItem } from './types';
-import { mergeSx } from '../../utils';
 
 const RichTreeComponent = <R extends TreeViewBaseItem, Multiple extends boolean | undefined>(
   {

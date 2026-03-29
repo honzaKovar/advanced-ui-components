@@ -1,7 +1,7 @@
 import { Theme } from '@mui/material/styles';
+import { alpha } from '@mui/system';
 
 import { getComponentClassName } from '../../utils';
-import { alpha } from '@mui/system';
 
 export const maxMarksCount = 15;
 export const minMajorBarsCount = 5;

@@ -1,4 +1,5 @@
 import { TreeViewBaseItem } from '../../components/RichTree';
+
 import { RichTreeStoryObj } from './types';
 
 export const TreeDepth = {
