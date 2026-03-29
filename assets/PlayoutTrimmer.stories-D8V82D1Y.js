@@ -1,6 +1,6 @@
-import{M as l}from"./index-CF0ufc7-.js";import{j as n}from"./jsx-runtime-CB_V9I5Y.js";import{useMDXComponents as t}from"./index-B7_Hqcjg.js";import"./iframe-Bcqk3YVj.js";import"../sb-preview/runtime.js";import"./index-CTjT7uj6.js";import"./assertThisInitialized-BhlF73o5.js";import"./index-CpHeDkVl.js";import"./index-OArTgSY1.js";import"./index-DrFu-skq.js";function r(s){const e=Object.assign({h1:"h1",p:"p",hr:"hr",h2:"h2",ul:"ul",li:"li",strong:"strong",h3:"h3",br:"br",code:"code",em:"em"},t(),s.components);return n.jsxs(n.Fragment,{children:[n.jsx(l,{title:"Stories/PlayoutTrimmer/Description"}),`
+import{M as l}from"./index-BBo-cczk.js";import{j as n}from"./jsx-runtime-CB_V9I5Y.js";import{useMDXComponents as t}from"./index-B7_Hqcjg.js";import"./iframe-BbZfjQMy.js";import"../sb-preview/runtime.js";import"./index-CTjT7uj6.js";import"./assertThisInitialized-BhlF73o5.js";import"./index-CpHeDkVl.js";import"./index-OArTgSY1.js";import"./index-DrFu-skq.js";function r(s){const e=Object.assign({h1:"h1",p:"p",hr:"hr",h2:"h2",ul:"ul",li:"li",strong:"strong",h3:"h3",br:"br",code:"code",em:"em"},t(),s.components);return n.jsxs(n.Fragment,{children:[n.jsx(l,{title:"Stories/PlayoutTrimmer/Description"}),`
 `,n.jsx(e.h1,{id:"playouttrimmer",children:"PlayoutTrimmer"}),`
-`,n.jsx(e.p,{children:"A dual-handle timeline component for range selection and precise progress control."}),`
+`,n.jsx(e.p,{children:"A triple-handle timeline component for range selection and precise progress control."}),`
 `,n.jsx(e.p,{children:"Designed for media-oriented interfaces where users need to define a segment and navigate within it."}),`
 `,n.jsx(e.hr,{}),`
 `,n.jsx(e.h2,{id:"overview",children:"Overview"}),`

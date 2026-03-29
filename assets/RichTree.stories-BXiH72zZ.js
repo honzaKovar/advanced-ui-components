@@ -1,6 +1,6 @@
-import"./chunk-HLWAVYOI-CtXV-ZwH.js";import{M as t}from"./index-CF0ufc7-.js";import{j as e}from"./jsx-runtime-CB_V9I5Y.js";import{useMDXComponents as o}from"./index-B7_Hqcjg.js";import"./iframe-Bcqk3YVj.js";import"../sb-preview/runtime.js";import"./index-CTjT7uj6.js";import"./react-18-DMU7YjPt.js";import"./index-CpHeDkVl.js";import"./assertThisInitialized-BhlF73o5.js";import"./index-OArTgSY1.js";import"./index-DrFu-skq.js";function i(r){const n=Object.assign({h1:"h1",p:"p",code:"code",strong:"strong",ul:"ul",li:"li",hr:"hr",h2:"h2",h3:"h3"},o(),r.components);return e.jsxs(e.Fragment,{children:[e.jsx(t,{title:"Stories/RichTreeViewPro/Description"}),`
-`,e.jsx(n.h1,{id:"richtreeviewpro",children:"RichTreeViewPro"}),`
-`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"RichTreeViewPro"})," is an advanced, highly extensible tree view component built on ",e.jsx(n.strong,{children:"MUI X RichTreeViewPro"}),"."]}),`
+import"./chunk-HLWAVYOI-Cy6vzTZy.js";import{M as t}from"./index-BBo-cczk.js";import{j as e}from"./jsx-runtime-CB_V9I5Y.js";import{useMDXComponents as o}from"./index-B7_Hqcjg.js";import"./iframe-BbZfjQMy.js";import"../sb-preview/runtime.js";import"./index-CTjT7uj6.js";import"./react-18-DMU7YjPt.js";import"./index-CpHeDkVl.js";import"./assertThisInitialized-BhlF73o5.js";import"./index-OArTgSY1.js";import"./index-DrFu-skq.js";function i(s){const n=Object.assign({h1:"h1",p:"p",code:"code",strong:"strong",ul:"ul",li:"li",hr:"hr",h2:"h2",h3:"h3"},o(),s.components);return e.jsxs(e.Fragment,{children:[e.jsx(t,{title:"Stories/RichTree/Description"}),`
+`,e.jsx(n.h1,{id:"richtree",children:"RichTree"}),`
+`,e.jsxs(n.p,{children:[e.jsx(n.code,{children:"RichTree"})," is an advanced, highly extensible tree view component built on ",e.jsx(n.strong,{children:"MUI X RichTreeViewPro"}),"."]}),`
 `,e.jsxs(n.p,{children:["It is designed for ",e.jsx(n.strong,{children:"large interactive hierarchies"})," with features like:"]}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsx(n.li,{children:"Drag-and-drop aware UI layer (implementation-agnostic)"}),`
@@ -11,7 +11,7 @@ import"./chunk-HLWAVYOI-CtXV-ZwH.js";import{M as t}from"./index-CF0ufc7-.js";imp
 `,e.jsx(n.hr,{}),`
 `,e.jsx(n.h2,{id:"core-architecture",children:"Core Architecture"}),`
 `,e.jsx(n.h3,{id:"resolver-based-design",children:"Resolver-Based Design"}),`
-`,e.jsxs(n.p,{children:["At its core, ",e.jsx(n.code,{children:"RichTreeViewPro"})," uses a ",e.jsx(n.strong,{children:"Prop Resolver system"}),":"]}),`
+`,e.jsxs(n.p,{children:["At its core, ",e.jsx(n.code,{children:"RichTree"})," uses a ",e.jsx(n.strong,{children:"Prop Resolver system"}),":"]}),`
 `,e.jsxs(n.ul,{children:[`
 `,e.jsxs(n.li,{children:["UI properties are computed ",e.jsx(n.strong,{children:"at render time"})," instead of being stored on data nodes"]}),`
 `,e.jsxs(n.li,{children:["Domain data (",e.jsx(n.code,{children:"items"}),") remain ",e.jsx(n.strong,{children:"UI-agnostic"})]}),`
@@ -65,4 +65,4 @@ import"./chunk-HLWAVYOI-CtXV-ZwH.js";import{M as t}from"./index-CF0ufc7-.js";imp
 `,e.jsxs(n.li,{children:[e.jsx(n.strong,{children:"DnD-Aware:"})," UI responds to drag/drop state without binding to any library"]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.strong,{children:"Performance-Optimized:"})," depth map, stable references, memoized resolvers"]}),`
 `,e.jsxs(n.li,{children:[e.jsx(n.strong,{children:"React-Friendly:"})," minimal re-renders, pure hooks, predictable behavior"]}),`
-`]})]})}function l(r={}){const{wrapper:n}=Object.assign({},o(),r.components);return n?e.jsx(n,{...r,children:e.jsx(i,{...r})}):i(r)}const d=()=>{throw new Error("Docs-only story")};d.parameters={docsOnly:!0};const s={title:"Stories/RichTreeViewPro/Description",tags:["stories-mdx"],includeStories:["__page"]};s.parameters=s.parameters||{};s.parameters.docs={...s.parameters.docs||{},page:l};const v=["__page"];export{v as __namedExportsOrder,d as __page,s as default};
+`]})]})}function l(s={}){const{wrapper:n}=Object.assign({},o(),s.components);return n?e.jsx(n,{...s,children:e.jsx(i,{...s})}):i(s)}const d=()=>{throw new Error("Docs-only story")};d.parameters={docsOnly:!0};const r={title:"Stories/RichTree/Description",tags:["stories-mdx"],includeStories:["__page"]};r.parameters=r.parameters||{};r.parameters.docs={...r.parameters.docs||{},page:l};const v=["__page"];export{v as __namedExportsOrder,d as __page,r as default};
