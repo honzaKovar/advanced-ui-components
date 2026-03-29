@@ -1,5 +1,7 @@
 import { render } from '@testing-library/react';
+import { ThemeProvider } from '@mui/material';
 
+import { theme } from '../../../../theme';
 import { mockedHighlightSegment, mockedItems, mockedTreeItem, mockHighlightClass, mockRootClass } from '../../__mocks__';
 import { RichTree } from '../../RichTree';
 
@@ -17,7 +19,11 @@ jest.mock('@mui/x-tree-view-pro', () => {
 });
 
 const renderWithContext = (isDropzoneActive?: boolean, highlightedLabelSegment?: string) =>
-  render(<RichTree items={mockedItems} slots={{ item: TreeItem }} isDropzoneActive={isDropzoneActive} highlightedLabelSegment={highlightedLabelSegment} />);
+  render(
+    <ThemeProvider theme={theme}>
+      <RichTree items={mockedItems} slots={{ item: TreeItem }} isDropzoneActive={isDropzoneActive} highlightedLabelSegment={highlightedLabelSegment} />
+    </ThemeProvider>,
+  );
 
 describe('TreeItem', () => {
   beforeEach(() => {

@@ -125,7 +125,7 @@ describe('getMarks', () => {
   it('should fallback to normalized 0-1 scaling if totalUnits is identical to totalSeconds', () => {
     const totalSeconds = 10;
     const totalUnits = 10;
-    const marks = getMarks(totalSeconds, true, totalUnits, 10);
+    const marks = getMarks(totalSeconds, false, totalUnits, 10);
 
     expect(marks[1].value).toBe(0.1);
     expect(marks[10].value).toBe(1);

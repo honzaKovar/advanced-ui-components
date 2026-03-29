@@ -4,12 +4,11 @@ import { usePlayoutTrimmer } from './usePlayoutTrimmer';
 
 const mockChangeEvent = new Event('change');
 const mockProgressThumbIndex = 0;
-const defaultActiveRange: [number, number] = [0, 1];
 const updatedActiveRange: [number, number] = [0.2, 0.8];
 
 jest.mock('./constants', () => ({
   changeEvent: new Event('change'),
-  defaultActiveRange,
+  defaultActiveRange: [0, 1],
   progressThumbIndex: 0,
 }));
 

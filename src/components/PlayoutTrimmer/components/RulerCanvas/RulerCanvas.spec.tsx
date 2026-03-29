@@ -86,14 +86,17 @@ describe('RulerCanvas', () => {
     await waitFor(() => expect(drawRuler).toHaveBeenCalled());
 
     expect(drawRuler).toHaveBeenCalledWith(
-      canvasElement,
-      expect.any(Object),
-      seconds,
-      initialDevicePixelRatio,
-      initialWrapperHeight,
-      initialWrapperWidth,
-      initialActiveRange,
-      undefined,
+      expect.objectContaining({
+        canvas: canvasElement,
+        ctx: expect.any(Object),
+        totalSeconds: seconds,
+        devicePixelRatio: initialDevicePixelRatio,
+        canvasHeight: initialWrapperHeight,
+        canvasWidth: initialWrapperWidth,
+        isUnitBased: false,
+        activeRange: initialActiveRange,
+        totalUnits: undefined,
+      }),
     );
   });
 
@@ -137,14 +140,17 @@ describe('RulerCanvas', () => {
     // Wait for drawRuler to be called with new dimensions
     await waitFor(() =>
       expect(drawRuler).toHaveBeenCalledWith(
-        canvasElement,
-        expect.any(Object),
-        seconds,
-        initialDevicePixelRatio,
-        newWrapperHeight,
-        newWrapperWidth,
-        initialActiveRange,
-        undefined,
+        expect.objectContaining({
+          canvas: canvasElement,
+          ctx: expect.any(Object),
+          totalSeconds: seconds,
+          devicePixelRatio: initialDevicePixelRatio,
+          canvasHeight: newWrapperHeight,
+          canvasWidth: newWrapperWidth,
+          isUnitBased: false,
+          activeRange: initialActiveRange,
+          totalUnits: undefined,
+        }),
       ),
     );
   });
@@ -182,14 +188,17 @@ describe('RulerCanvas', () => {
     // Wait for drawRuler to be called with updated devicePixelRatio
     await waitFor(() =>
       expect(drawRuler).toHaveBeenCalledWith(
-        canvasElement,
-        expect.any(Object),
-        seconds,
-        newDevicePixelRatio,
-        initialWrapperHeight,
-        initialWrapperWidth,
-        initialActiveRange,
-        undefined,
+        expect.objectContaining({
+          canvas: canvasElement,
+          ctx: expect.any(Object),
+          totalSeconds: seconds,
+          devicePixelRatio: newDevicePixelRatio,
+          canvasHeight: initialWrapperHeight,
+          canvasWidth: initialWrapperWidth,
+          isUnitBased: false,
+          activeRange: initialActiveRange,
+          totalUnits: undefined,
+        }),
       ),
     );
   });
@@ -225,14 +234,17 @@ describe('RulerCanvas', () => {
     // Wait for drawRuler to be called with new seconds value
     await waitFor(() =>
       expect(drawRuler).toHaveBeenCalledWith(
-        canvasElement,
-        expect.any(Object),
-        newSeconds,
-        expect.any(Number),
-        initialWrapperHeight,
-        initialWrapperWidth,
-        initialActiveRange,
-        undefined,
+        expect.objectContaining({
+          canvas: canvasElement,
+          ctx: expect.any(Object),
+          totalSeconds: newSeconds,
+          devicePixelRatio: expect.any(Number),
+          canvasHeight: initialWrapperHeight,
+          canvasWidth: initialWrapperWidth,
+          isUnitBased: false,
+          activeRange: initialActiveRange,
+          totalUnits: undefined,
+        }),
       ),
     );
   });
@@ -268,14 +280,17 @@ describe('RulerCanvas', () => {
     // Wait for drawRuler to be called with new activeRange value
     await waitFor(() =>
       expect(drawRuler).toHaveBeenCalledWith(
-        canvasElement,
-        expect.any(Object),
-        expect.any(Number),
-        expect.any(Number),
-        initialWrapperHeight,
-        initialWrapperWidth,
-        newActiveRange,
-        undefined,
+        expect.objectContaining({
+          canvas: canvasElement,
+          ctx: expect.any(Object),
+          totalSeconds: expect.any(Number),
+          devicePixelRatio: expect.any(Number),
+          canvasHeight: initialWrapperHeight,
+          canvasWidth: initialWrapperWidth,
+          isUnitBased: false,
+          activeRange: newActiveRange,
+          totalUnits: undefined,
+        }),
       ),
     );
   });
@@ -331,14 +346,17 @@ describe('RulerCanvas', () => {
 
     await waitFor(() =>
       expect(drawRuler).toHaveBeenCalledWith(
-        expect.anything(),
-        expect.anything(),
-        seconds,
-        expect.any(Number),
-        initialWrapperHeight,
-        initialWrapperWidth,
-        undefined,
-        totalUnits,
+        expect.objectContaining({
+          canvas: expect.any(Object),
+          ctx: expect.any(Object),
+          totalSeconds: seconds,
+          devicePixelRatio: expect.any(Number),
+          canvasHeight: initialWrapperHeight,
+          canvasWidth: initialWrapperWidth,
+          isUnitBased: true,
+          activeRange: undefined,
+          totalUnits: totalUnits,
+        }),
       ),
     );
   });
