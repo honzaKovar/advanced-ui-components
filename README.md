@@ -1,8 +1,24 @@
-# React + Vite
+## 🚀 Advanced UI Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small collection of highly interactive, performance-focused React components designed to handle complex UI scenarios, with a focus on architecture, extensibility, and predictable behavior.  
+Demonstrating scalable UI patterns beyond typical component-level abstractions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Highlights
+
+- **RichTree** – extensible tree view with a resolver-based architecture, enabling per-node UI logic, selective drag-and-drop behavior, and data/UI separation  
+- **PlayoutTrimmer** – dual-slider timeline with constraint logic, visual ruler, and unit-agnostic scaling (normalized or frame-based)  
+
+---
+
+### Key Ideas
+
+- Separation of **domain data and presentation logic**  
+- **Resolver pattern** for dynamic, per-node UI behavior  
+- **Performance-conscious design** (memoization, O(1) structural lookups)  
+- Fully **controlled components** for predictable integration with external state  
+
+---
+
+👉 **[View Storybook Demo](https://honzakovar.github.io/advanced-ui-components/)**
