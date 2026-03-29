@@ -1,5 +1,5 @@
 /* eslint-disable id-length */
-import { defaultActiveRange, majorBarsIdealIntervalSeconds, maxMarksCount, minMajorBarsCount, preferredIntervalsInSeconds } from '../constants';
+import { defaultActiveRange, majorBarsIdealIntervalSeconds, maxMarksCount, minMajorBarsCount, preferredIntervalsInSeconds } from '../../constants';
 
 import { activeBarColor, inactiveBarColor, majorBarHeight, minorBarHeight } from './constants';
 import { DrawRulerProps } from './types';

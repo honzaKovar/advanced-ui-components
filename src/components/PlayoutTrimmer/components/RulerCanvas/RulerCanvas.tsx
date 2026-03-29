@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 
-import { sliderBaseHeight } from '../constants';
+import { sliderBaseHeight } from '../../constants';
 
 import { canvasStyle, canvasWrapperSx } from './styles';
 import { RulerCanvasProps } from './types';

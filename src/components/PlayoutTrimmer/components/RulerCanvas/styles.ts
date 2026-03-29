@@ -1,7 +1,7 @@
 import { SxProps, Theme } from '@mui/material';
 import { CSSProperties } from 'react';
 
-import { rulerCanvasZIndex, sliderBaseHeight } from '../constants';
+import { rulerCanvasZIndex, sliderBaseHeight } from '../../constants';
 
 export const canvasStyle: CSSProperties = {
   display: 'block',
