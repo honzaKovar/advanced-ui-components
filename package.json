@@ -9,8 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build",
-    "storybook:publish": "npm run storybook:build && touch ./storybook-static/.nojekyll && npx gh-pages -d ./storybook-static --dotfiles",
+   "storybook:build": "storybook build",
+    "storybook:prepare": "node -e \"require('fs').closeSync(require('fs').openSync('./storybook-static/.nojekyll', 'w'))\"",
+    "storybook:publish": "npm run storybook:build && npm run storybook:prepare && gh-pages -d storybook-static --dotfiles",
     "test": "jest"
   },
   "dependencies": {
