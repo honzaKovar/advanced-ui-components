@@ -8,7 +8,7 @@ const iconSizePx = 16;
 const iconContainerSizePx = 24;
 const defaultTreeItemHeightPx = 32;
 const treeItemMarginBottomUnits = 0.5;
-const outlinePaddingUnits = 1.5;
+const outlinePaddingUnits = 3;
 const marginOffsetPx = 12;
 
 export const commonTreeItemSx: SxProps<Theme> = ({ palette }) => ({
